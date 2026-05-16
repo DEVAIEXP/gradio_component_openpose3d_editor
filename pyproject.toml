@@ -1,0 +1,46 @@
+[build-system]
+requires = [
+  "hatchling",
+  "hatch-requirements-txt",
+  "hatch-fancy-pypi-readme>=22.5.0",
+]
+build-backend = "hatchling.build"
+
+[project]
+name = "gradio_openpose3d_editor"
+version = "0.0.1"
+description = "Openpose 3D editor component for Gradio"
+readme = "README.md"
+license = "apache-2.0"
+license-files = ["LICENSE", "NOTICE"]
+requires-python = ">=3.10"
+authors = [{ name = "Eliseu Silva", email = "elismasilva@gmail.com" }]
+keywords = ["gradio-custom-component"]
+# Add dependencies here
+dependencies = ["gradio>=6.0,<7.0"]
+classifiers = [
+  'Development Status :: 3 - Alpha',
+  'Operating System :: OS Independent',
+  'Programming Language :: Python :: 3',
+  'Programming Language :: Python :: 3 :: Only',
+  'Programming Language :: Python :: 3.8',
+  'Programming Language :: Python :: 3.9',
+  'Programming Language :: Python :: 3.10',
+  'Programming Language :: Python :: 3.11',
+  'Topic :: Scientific/Engineering',
+  'Topic :: Scientific/Engineering :: Artificial Intelligence',
+  'Topic :: Scientific/Engineering :: Visualization',
+]
+
+# [project.urls]
+repository = "https://github.com/DEVAIEXP/gradio_component_openpose3d_editor"
+space = "https://huggingface.co/spaces/elismasilva/gradio_openpose3d_editor"
+
+[project.optional-dependencies]
+dev = ["build", "twine"]
+
+[tool.hatch.build]
+artifacts = ["*.pyi"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/gradio_openpose3d_editor"]
