@@ -145,7 +145,7 @@ _JS_ON_LOAD = r"""
     const H = () => root.clientHeight;
 
     // ==================== CAMERA ====================
-    const camera = new THREE.PerspectiveCamera(70, W() / H(), 0.1, 1000);
+    const camera = new THREE.PerspectiveCamera(60, W() / H(), 0.1, 1000);
     camera.position.set(80, 60, 70);
     camera.lookAt(0, 30, 0);
 
@@ -551,7 +551,7 @@ _JS_ON_LOAD = r"""
           bone.getWorldPosition(wp); 
           sprite.position.copy(wp);
           const d = camera.position.distanceTo(wp); 
-          sprite.scale.set(d * 0.012, d * 0.012, 1);
+          sprite.scale.set(d * 0.018, d * 0.018, 1);
         }
       }
       orbit.update(); 

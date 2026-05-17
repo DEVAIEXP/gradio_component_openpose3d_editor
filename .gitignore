@@ -11,3 +11,4 @@ __tmp/*
 .mypycache
 .ruff_cache
 demo/
+openpose/
